@@ -47,6 +47,7 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("androidx.cardview:cardview:1.0.0")
 
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
@@ -56,7 +57,4 @@ dependencies {
 
     // JSON 解析
     implementation("com.google.code.gson:gson:2.10.1")
-
-    // 图片压缩（截图转 base64）
-    implementation("androidx.exifinterface:exifinterface:1.3.7")
 }
