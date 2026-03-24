@@ -53,31 +53,122 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- 开启无障碍权限 -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnOpenSettings"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
-            android:text="🔓 无障碍权限"
+            android:text="🔓 无障碍"
             android:textAllCaps="false"
             android:textSize="13sp"
             app:cornerRadius="12dp"
             app:backgroundTint="#6366F1"
             android:layout_marginEnd="8dp" />
 
-        <!-- 启动悬浮窗 -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnFloat"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
-            android:text="🫧 启动悬浮窗"
+            android:text="🫧 悬浮窗"
             android:textAllCaps="false"
             android:textSize="13sp"
             app:cornerRadius="12dp"
             app:backgroundTint="#8B5CF6" />
     </LinearLayout>
+
+    <!-- 语音风格选择 -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardVoiceStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toBottomOf="@id/btnRow1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎙️ 语音风格"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#1E293B" />
+
+            <TextView
+                android:id="@+id/tvCurrentVoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前：豆包"
+                android:textSize="12sp"
+                android:textColor="#64748B"
+                android:layout_marginTop="2dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnVoiceDoubao"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="🎀 豆包"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    app:cornerRadius="8dp"
+                    app:backgroundTint="#EC4899"
+                    android:layout_marginEnd="4dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnVoiceXiaoyan"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="🌸 小燕"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    app:cornerRadius="8dp"
+                    app:backgroundTint="#8B5CF6"
+                    android:layout_marginEnd="4dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnVoiceXiaofeng"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="🎩 小风"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    app:cornerRadius="8dp"
+                    app:backgroundTint="#3B82F6" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTestVoice"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="🔊 试听当前声音"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                app:cornerRadius="8dp"
+                app:backgroundTint="#10B981"
+                android:layout_marginTop="8dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
     <!-- API Key 输入 -->
     <com.google.android.material.textfield.TextInputLayout
@@ -86,7 +177,7 @@
         android:layout_height="wrap_content"
         android:hint="AI API Key"
         android:layout_marginTop="12dp"
-        app:layout_constraintTop_toBottomOf="@id/btnRow1"
+        app:layout_constraintTop_toBottomOf="@id/cardVoiceStyle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -147,7 +238,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- 执行 -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnExecute"
             android:layout_width="0dp"
@@ -160,7 +250,6 @@
             app:backgroundTint="#10B981"
             android:layout_marginEnd="8dp" />
 
-        <!-- 语音输入 -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnVoice"
             android:layout_width="0dp"
