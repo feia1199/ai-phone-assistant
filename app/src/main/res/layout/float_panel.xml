@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/floatPanel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:padding="8dp"
+    android:gravity="center">
+
+    <!-- 主按钮 - 长按拖动，单击弹出面板 -->
+    <FrameLayout
+        android:id="@+id/floatButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp">
+
+        <!-- 悬浮球 -->
+        <LinearLayout
+            android:id="@+id/ballContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/float_ball_bg"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/ballText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🤖"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <!-- 录音状态指示 -->
+        <View
+            android:id="@+id/recordingDot"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="4dp"
+            android:background="@drawable/recording_dot"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <!-- 展开面板（默认隐藏） -->
+    <LinearLayout
+        android:id="@+id/expandPanel"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:background="@drawable/panel_bg"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvListeningStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎤 点击录音"
+            android:textSize="13sp"
+            android:textColor="#64748B"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 录音按钮 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRecord"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="🎤 语音指令"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            app:cornerRadius="8dp"
+            app:backgroundTint="#6366F1" />
+
+        <!-- 回桌面 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnHome"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="🏠 回桌面"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            app:cornerRadius="8dp"
+            app:backgroundTint="#10B981"
+            android:layout_marginTop="4dp" />
+
+        <!-- 返回 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="⬅️ 返回"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            app:cornerRadius="8dp"
+            app:backgroundTint="#F59E0B"
+            android:layout_marginTop="4dp" />
+
+        <!-- 关闭面板 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClose"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="❌ 关闭"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            app:cornerRadius="8dp"
+            app:backgroundTint="#EF4444"
+            android:layout_marginTop="4dp"
+            style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+    </LinearLayout>
+
+</LinearLayout>
