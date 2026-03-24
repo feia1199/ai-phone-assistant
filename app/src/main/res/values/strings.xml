@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AI 助手</string>
+    <string name="accessibility_description">AI 助手需要无障碍权限来读取屏幕内容并帮你操作手机，包括点击、滑动、输入文字等。</string>
+    <string name="service_running">AI 助手服务运行中</string>
+    <string name="service_stopped">AI 助手服务未启动</string>
+    <string name="btn_start">启动服务</string>
+    <string name="btn_stop">停止服务</string>
+    <string name="btn_open_settings">开启无障碍权限</string>
+    <string name="hint_command">输入指令，如：打开微信</string>
+    <string name="btn_execute">执行</string>
+    <string name="status_label">服务状态</string>
+    <string name="log_label">操作日志</string>
+    <string name="api_key_hint">输入 AI API Key (OpenAI / Claude)</string>
+    <string name="api_url_hint">API 地址 (默认 OpenAI)</string>
+</resources>
